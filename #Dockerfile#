@@ -7,9 +7,7 @@ RUN echo "source /root/peda/peda.py" >> /root/.gdbinit
 RUN git clone https://github.com/slimm609/checksec.sh /root/checksec.sh
 RUN echo "export PATH=${PATH}:/root/checksec.sh" >> /root/.bashrc
 RUN pip install --upgrade git+https://github.com/Gallopsled/pwntools
-RUN wget http://ericlawrence.com/dl/MonoFiddler-v4484.zip -P /root/
-RUN mkdir -p /root/fiddler
-RUN ls /root
-RUN unzip /root/MonoFiddler-v4484.zip -d /root/fiddler/
+RUN wget http://ericlawrence.com/dl/MonoFiddler-v4484.zip -P /root/fiddler.zip
+RUN unzip /root/fiddler.zip/MonoFiddler-v4484.zip /root/fiddler
 RUN wget https://portswigger.net/DownloadUpdate.ashx?Product=Free -P/root/burp.jar
 
